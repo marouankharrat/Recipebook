@@ -1,0 +1,172 @@
+html {
+    overflow-x: hidden;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+footer {
+    background-color: #cccccc;
+    padding: 25px;
+}
+
+.mt-1 {
+    margin-top: 10px;
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+
+.mt-3 {
+    margin-top: 30px;
+}
+
+.mt-4 {
+    margin-top: 40px;
+}
+
+.mt-5 {
+    margin-top: 50px;
+}
+
+
+.mb-1 {
+    margin-bottom: 10px;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+
+.mb-3 {
+    margin-bottom: 30px;
+}
+
+.mb-4 {
+    margin-bottom: 40px;
+}
+
+.mb-5 {
+    margin-bottom: 50px;
+}
+
+.card img {
+    width: 100%;
+}
+
+
+.speiseplanFilter {
+    margin-bottom: 4em;
+    margin-top: 4em;
+}
+
+.speiseplanFilter span {
+    margin-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 17px;
+    background-color: #cccccc;
+    color: #000;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.speiseplanFilter span.active {
+    background-color: forestgreen;
+    color: #fff;
+}
+
+.cardsList .card {
+    padding: 20px;
+    box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 3em;
+}
+
+.card-body .card-body-heart img {
+    width: 30px;
+}
+
+.card-body .card-body-heart {
+    position: absolute;
+    right: 20px;
+}
+
+
+.card-action .card-action-edit {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    color: #fff;
+    background: green;
+    font-size: 15px;
+    margin-top: 1em;
+    display: inline-block;
+}
+
+.card-action .card-action-plus {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    color: #fff;
+    background: green;
+    font-size: 15px;
+    margin-top: 1em;
+    display: inline-block;
+    float: right;
+}
+
+.card-body-description {
+    display: none;
+}
+
+
+.card-body-heart {
+    font-size: 25px;
+    color: gray;
+}
+
+.card-body-heart:hover {
+    font-size: 25px;
+    color: gray !important;
+}
+
+.card-body-heart.like {
+    color: green !important;
+}
+
+.headerImage img {
+    width: 100%;
+}
+
+/* Form Add New Speise */
+.addSpeise {
+    text-align: center;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.addSpeise .btnNewSpeise {
+    background: #00adff;
+    color: white;
+}
+
+.formNewSpeise {
+    max-width: 70%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.tox-tinymce-aux {
+    display: none !important;
+}

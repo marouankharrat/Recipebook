@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Mini Projekt Amira</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- TinyMCE CDN -->
+  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Meal plan</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="headerImage">
+    <img src="./images/img1.jpeg" />
+  </div>
+
+  <div class="container mt-5 mb-4">
+    <h1></h1>
+    <br />
+    <div class="row">
+      <div class="col-md-6">
+        <h3 class="mb-3"></h3>
+        <p>
+          Tunisian cuisine is a diverse mix of flavors representative of the country's past and central location 
+          in North Africa. While cuisine varies regionally, Tunisian food typically combines French and African 
+          flavors with a spicy kick. Tunisian dishes featuring couscous are often made with fresh seafood or hearty lamb, 
+          depending on local availability. 
+          
+          Tunisia is the place of cultures and not only offers local food. 
+          
+          Foodies can enjoy all types of international cuisine in the country's major cities. In short, 
+          Tunisia is a foodie's paradise. Here are some popular Tunisian foods you must try:
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="./images/OIP (1).jpg" class="img-responsive" style="width: 100%" alt="Image" />
+      </div>
+    </div>
+    <hr class="mt-5" />
+  </div>
+
+  <div class="container mt-4 mb-4">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="addSpeise">
+          <button class="btn btnNewSpeise">New food <i class="glyphicon glyphicon-plus"></i></button>
+        </div>
+        <div class="formNewSpeise">
+          <div class="row justify-content-md-center">
+            <div class="col-md-12">
+              <h3>Please add a new dish</h3>
+              <br>
+              <div class="form-group">
+                <label for="speseKateg">Category</label>
+                <select class="form-control speseKateg" id="speseKateg">
+                  <option value="1">Appetizer</option>
+                  <option value="2">Main course</option>
+                  <option value="3">Dessert</option>
+                </select>
+              </div>
+
+              <div class="form group">
+                <label>Dining headline</label>
+                <input class="form-control speiseTitle" type="text" placeholder="Dining headline">
+              </div>
+              <br>
+              <div class="form-group">
+                <label>Food teaser</label>
+                <textarea class="form-control speiseTeaser" placeholder="Food teaser" rows="3"></textarea>
+              </div>
+
+              <div class="form group">
+                <label>Dining Image Path</label>
+                <input class="form-control speiseImagePath" type="text" placeholder="Example Path: test.jpg">
+              </div>
+              <br>
+              <div class="form-group">
+                <label>Food description</label>
+                <textarea id="editor"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary justify-content-md-center">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="speiseplanFilter">
+          <span class="active" data-categ="*">All</span>
+          <span data-categ="1">Appetizer</span>
+          <span data-categ="2">Main course </span>
+          <span data-categ="3">Dessert</span>
+        </div>
+      </div>
+
+      <div class="col-md-12 cardsList">
+        <div class="card" data-categ="4">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="card-img-top" src="./images/R.jpg" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <a class="card-body-heart" href="##"><i class="glyphicon glyphicon-heart"></i></a>
+                <h2>Tajine</h2>
+                <p class="card-text">
+                  The Tunisian tagine can be purely vegetarian with potatoes or vegetables (e.g. with spinach, peas...) or
+                   Depending on your taste, it is also prepared with meat (often chicken) or fish (especially tuna).
+                   become. Sometimes the casserole is also baked with cheese.
+
+                   The dish is more similar to an Italian frittata than the tagine dishes found in Morocco
+                   knows.
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="##" class="card-action-edit">Edit</a>
+                <a href="##" class="card-action-plus">learn more</a>
+              </div>
+            </div>
+
+            <div class="col-md-12 card-body-description">
+              <h2>Tajine Description</h2>
+              <p>
+                The tagine is offered in many different sizes and shapes in Tunisia. This will not only be the case
+                Served as a main course, but also a popular starter.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        
+        <div class="card" data-categ="1">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="card-img-top" src="./images/Tunesischer-Salat-768x512.jpg" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <a class="card-body-heart" href="##"><i class="glyphicon glyphicon-heart"></i></a>
+                <h2> Slata Mechouia</h2>
+                <p class="card-text">
+                 This salad is another Tunisian staple that comes with almost every meal
+                   Appetizer is served.
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="##" class="card-action-edit">Edit</a>
+                <a href="##" class="card-action-plus">learn more</a>
+              </div>
+            </div>
+            <div class="col-md-12 card-body-description">
+              <h2>Slata Mechouia Description</h2>
+              <p>
+                Literally translated, it means “grilled salad” and consists of tomatoes and green peppers that are over
+                 Roasted over an open fire and then finely chopped and seasoned with onions, garlic, ground coriander and
+                 Mix caraway, lemon juice and lots of olive oil.
+
+                 Harissa is also used in this salad. So watch out because this salad is spicy!
+                 Capers, hard-boiled eggs and tuna can also be added to this dish.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-categ="3">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="card-img-top" src="./images/OIP.jpg" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <a class="card-body-heart" href="##"><i class="glyphicon glyphicon-heart"></i></a>
+                <h2> Makroudh</h2>
+                <p class="card-text">
+                  Makroudh (Makroud) is a type of pastry from Tunisia and Algeria.
+
+                   The Tunisian city of Kairouan is particularly known for the production of Makroud.
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="##" class="card-action-edit">Edit</a>
+                <a href="##" class="card-action-plus">learn more</a>
+              </div>
+            </div>
+            <div class="col-md-12 card-body-description">
+              <h2>Makroudh Description</h2>
+              <p>
+                Makroudh are a popular dessert in Tunisia and other North African countries
+                 Mediterranean coast. There, however, the recipe is modified differently by adding almonds to the filling
+                 added or the pastries can also be fried.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-categ="4">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="card-img-top" src="./images/Fricasse-768x646.jpg" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <a class="card-body-heart" href="##"><i class="glyphicon glyphicon-heart"></i></a>
+                <h2>Fricassé</h2>
+                <p class="card-text">
+                  This is one of the most popular street foods in Tunisia. It's a savory fried donut that
+                   filled with tuna, boiled egg, olives, harissa and boiled potatoes.
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="##" class="card-action-edit">Edit</a>
+                <a href="##" class="card-action-plus">learn more</a>
+              </div>
+            </div>
+            <div class="col-md-12 card-body-description">
+              <h2>Fricassé Description</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat. Duis autem vel eum iriure
+                dolor in hendrerit in vulputate velit esse molestie consequat,
+                vel illum dolore eu feugiat nulla facilisis at vero et
+                accumsan et iusto odio dignissim qui blandit praesent luptatum
+                zzril delenit augue duis dolore te feugait nulla facilisi.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-categ="2">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="card-img-top" src="./images/Couscous-768x576.jpg" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <a class="card-body-heart" href="##"><i class="glyphicon glyphicon-heart"></i></a>
+                <h2>Tunesische Couscous </h2>
+                <p class="card-text">
+                  Couscous is probably the most famous dish from North Africa. Couscous is originally a
+                   Berber dish and consists of a stew-like sauce made from vegetables such as potatoes, tomatoes, zucchini,
+                   Carrots, or pumpkin and lamb or chicken served on a bed of semolina.
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="##" class="card-action-edit">Edit</a>
+                <a href="##" class="card-action-plus">learn more</a>
+              </div>
+            </div>
+            <div class="col-md-12 card-body-description">
+              <h2>Tunesische Couscous Description</h2>
+              <p>
+                In the Djerba island version, fish is a common ingredient. Couscous can be prepared in many different ways
+                 but in Tunisia this stew always contains tomatoes and the semolina is served with a tomato sauce
+                 mixed.
+                 Le Kef has its own regional cuisine and the couscous prepared here is unique to its
+                 tempting combination of spicy and savory flavors.
+                 In Dar Boumakhlouf, order the Bourzguen, a typical lamb dish with rosemary served on a
+                 Bed of steamed semolina with dates and nuts such as almonds, hazelnuts, walnuts, pine nuts or
+                 Pistachios are served.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-categ="2">
+          <div class="row">
+            <div class="col-md-4">
+              <img class="card-img-top" src="./images/mloukhia-de-la-cuisine-tunsienne-2.jpg" />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <a class="card-body-heart" href="##"><i class="glyphicon glyphicon-heart"></i></a>
+                <h2>Molokhiya</h2>
+                <p class="card-text">
+                  The Tunisian Mloukhiya is made from the dried and powdered Molokheiya leaves (on
+                   German: Maltajute or Muskraut), the protein effect is completely eliminated.
+
+                   Here in Tunisia, every typical dish is almost a subject for my culinary high school diploma, that's what I wanted to say.
+                   Tunisian Mloukhiya provokes quite a bit of astonishment and noticeable concerns.
+                </p>
+              </div>
+              <div class="card-action">
+                <a href="##" class="card-action-edit">Edit</a>
+                <a href="##" class="card-action-plus">learn more</a>
+              </div>
+            </div>
+            <div class="col-md-12 card-body-description">
+              <h2>Molokhiya Description</h2>
+
+              <p>
+                The recipe has now been perfected through repeated testing.
+                 Attention: start the evening before!
+                 You CAN cook the Mloukhiya in 2 to 2.5 hours. BUT: after 7 hours it is guaranteed to taste great. I
+                 Cook them for four hours in the evening and another three the next morning, along with the meat. Then
+                 So much water evaporates that only about 1 liter of creamy soup remains.
+
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <footer class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>Copyright 2023 Marouan Kharrat</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
